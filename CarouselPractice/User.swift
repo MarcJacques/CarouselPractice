@@ -8,7 +8,16 @@
 
 import Foundation
 
-class User {
-    let result = [String]()
+struct UserResult: Codable {
+    let results: [User]
     
+}
+
+struct User: Codable {
+    let name: Name
+}
+
+struct Name: Codable {
+    let first: String
+    let last: String
 }
