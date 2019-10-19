@@ -37,15 +37,16 @@ class APIController {
                 return
             }
             //now that we got the data we are going to try to decode the JSON data and put the infor into our model
-            do {
+            do {//what are we trying to do
                 let newUser = try JSONDecoder().decode(UserResult.self
                     , from: data)
                 print(newUser)
                 self.users = newUser.results
-            } catch {
-                
-                
+            } catch {//if we get an error what to do if we catch it
+                NSLog("Error decoding users \(error)")
+                completion(error)
             }
-        }
+            completion(nil)
+        }.resume() //continue to run this dataTask as much as you need to
     }
 }
