@@ -43,7 +43,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6vz-g0-SGz">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RandomUserCollectionViewCell" id="6vz-g0-SGz" customClass="RandomUserCollectionViewCell" customModule="CarouselPractice" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="148.5" width="200" height="400"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LZX-cs-vAK">
@@ -54,8 +54,19 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="200" height="400"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0K-H8-iQg">
+                                                            <rect key="frame" x="8" y="371" width="87" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                 </collectionViewCellContentView>
+                                                <connections>
+                                                    <outlet property="featuredImageView" destination="UPb-Ch-fA3" id="jRc-Jy-7Ic"/>
+                                                    <outlet property="userNameLabel" destination="C0K-H8-iQg" id="3oC-Pd-9op"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>

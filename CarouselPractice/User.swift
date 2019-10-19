@@ -15,9 +15,14 @@ struct UserResult: Codable {
 
 struct User: Codable {
     let name: Name
+    let picture: Picture
 }
 
 struct Name: Codable {
     let first: String
     let last: String
+}
+
+struct Picture: Codable {
+    let large: String
 }
